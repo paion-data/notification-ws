@@ -6,6 +6,18 @@ webservice that sends real-time notifications to various client. It, currently, 
 
 - DingTalk (阿里钉钉)
 
+Documentation
+-------------
+
+```console
+ git clone git@github.com:QubitPi/notification-ws.git
+ cd notification-ws
+ mvn clean package
+ java -jar target/notification-ws-0.0.1-SNAPSHOT.jar
+ ```
+
+- Healthcheck: http://localhost:8080/actuator/health
+
 Development
 -----------
 
