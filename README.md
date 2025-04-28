@@ -2,6 +2,7 @@ Notification Webservice
 =======================
 
 [![API Doc Badge]][API Doc URL]
+[![Docker Hub][Docker Pulls Badge]][Docker Hub URL]
 [![Apache License Badge]][Apache License, Version 2.0]
 
 __Notification Webservice__ is a full-fledged Spring Boot application that lets us set up, with minimal effort, a
@@ -23,6 +24,36 @@ For this reason, Notification Webservice is suitable for a microservice architec
 
 Documentation
 -------------
+
+### Running in Docker
+
+Please make sure Docker is installed
+([_Installing Docker_](https://docker.qubitpi.org/desktop/setup/install/mac-install/)), then execute this on-click
+commands:
+
+> [!TIP]
+>
+> For instructions on how to obtain the __Dingding access token__ used above, please refer to
+> [the DingTalk documentation](https://open.dingtalk.com/document/orgapp/custom-robot-access)
+
+```console
+export NOTIFICATION_WS_DINGDING_ACCESS_TOKEN=<DingDing access token>
+docker run -it -p 8080:8080 -e NOTIFICATION_WS_DINGDING_ACCESS_TOKEN=$NOTIFICATION_WS_DINGDING_ACCESS_TOKEN jack20191124/notification-ws
+```
+
+The default port is 8080.
+
+- Healthcheck: http://localhost:8080/actuator/health
+- Swagger UI: http://localhost:8080/swagger-ui/index.html
+- Sending a DingTalk notification:
+
+  ```console
+  curl --location 'localhost:8080/dingding/createNotification' --header 'Content-Type: application/json' --data '{
+      "my notification"
+  }' -v
+  ```
+
+### Running from Code
 
 ```console
 git clone git@github.com:QubitPi/notification-ws.git
@@ -73,6 +104,8 @@ The use and distribution terms for [notification-ws]() are covered by the [Apach
 
 [Apache License Badge]: https://img.shields.io/badge/Apache%202.0-F25910.svg?style=for-the-badge&logo=Apache&logoColor=white
 [Apache License, Version 2.0]: https://www.apache.org/licenses/LICENSE-2.0
-
 [API Doc Badge]: https://img.shields.io/badge/Open%20API-Swagger-85EA2D.svg?style=for-the-badge&logo=openapiinitiative&logoColor=white&labelColor=6BA539
 [API Doc URL]: https://springdoc.org/
+
+[Docker Pulls Badge]: https://img.shields.io/docker/pulls/jack20191124/notification-ws?style=for-the-badge&logo=docker&color=2596EC
+[Docker Hub URL]: https://hub.docker.com/r/jack20191124/notification-ws
