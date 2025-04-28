@@ -15,14 +15,14 @@
  */
 package org.qubitpi.ws.notification;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootApplication
-public class NotificationWsApplication {
+@SpringBootTest
+class ApplicationTests {
 
-	public static void main(String[] args) {
-		SpringApplication.run(NotificationWsApplication.class, args);
+	@Test
+	void contextLoads() {
 	}
 
 }
