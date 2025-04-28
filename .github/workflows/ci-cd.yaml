@@ -98,7 +98,7 @@ jobs:
         if: github.ref == 'refs/heads/master'
         uses: docker/login-action@v2
         with:
-          username: jack20191124
+          username: paiondatahub
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Push image to DockerHub
         if: github.ref == 'refs/heads/master'
@@ -106,12 +106,12 @@ jobs:
         with:
           context: .
           push: true
-          tags: jack20191124/notification-ws:latest
+          tags: paiondatahub/notification-ws:latest
       - name: Push image Description
         if: github.ref == 'refs/heads/master'
         uses: peter-evans/dockerhub-description@v4
         with:
-          username: jack20191124
+          username: paiondatahub
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-          repository: jack20191124/notification-ws
+          repository: paiondatahub/notification-ws
           readme-filepath: README.md

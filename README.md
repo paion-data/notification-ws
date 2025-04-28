@@ -38,7 +38,7 @@ commands:
 
 ```console
 export NOTIFICATION_WS_DINGDING_ACCESS_TOKEN=<DingDing access token>
-docker run -it -p 8080:8080 -e NOTIFICATION_WS_DINGDING_ACCESS_TOKEN=$NOTIFICATION_WS_DINGDING_ACCESS_TOKEN jack20191124/notification-ws
+docker run -it -p 8080:8080 -e NOTIFICATION_WS_DINGDING_ACCESS_TOKEN=$NOTIFICATION_WS_DINGDING_ACCESS_TOKEN paiondatahub/notification-ws
 ```
 
 The default port is 8080.
@@ -107,5 +107,5 @@ The use and distribution terms for [notification-ws]() are covered by the [Apach
 [API Doc Badge]: https://img.shields.io/badge/Open%20API-Swagger-85EA2D.svg?style=for-the-badge&logo=openapiinitiative&logoColor=white&labelColor=6BA539
 [API Doc URL]: https://springdoc.org/
 
-[Docker Pulls Badge]: https://img.shields.io/docker/pulls/jack20191124/notification-ws?style=for-the-badge&logo=docker&color=2596EC
-[Docker Hub URL]: https://hub.docker.com/r/jack20191124/notification-ws
+[Docker Pulls Badge]: https://img.shields.io/docker/pulls/paiondatahub/notification-ws?style=for-the-badge&logo=docker&color=2596EC
+[Docker Hub URL]: https://hub.docker.com/r/paiondatahub/notification-ws
