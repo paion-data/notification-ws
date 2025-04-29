@@ -28,7 +28,7 @@ Documentation
 ### Running in Docker
 
 Please make sure Docker is installed
-([_Installing Docker_](https://docker.qubitpi.org/desktop/setup/install/mac-install/)), then execute this on-click
+([_Installing Docker_](https://docs.docker.com/desktop/setup/install/mac-install/)), then execute this on-click
 commands:
 
 > [!TIP]
@@ -56,8 +56,8 @@ The default port is 8080.
 > [!CAUTION]
 >
 > When the webservice shall be contacted through a
-> [Docker Compose internal network](https://docker.qubitpi.org/compose/how-tos/networking/), it's URL must be prefixed
-> with __http://__. For example
+> [Docker Compose internal network](https://docs.docker.com/compose/how-tos/networking/), it's URL must be prefixed with
+> __http://__. For example
 >
 > ```yaml
 > version: "3.9"
